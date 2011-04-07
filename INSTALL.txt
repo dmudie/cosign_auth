@@ -1,0 +1,26 @@
+; $Id: INSTALL.txt,v 1.3.2.2 2011/04/13 20:15:22 bdr Exp $
+
+http://drupal.org/project/cosign
+
+NOTE: this module was derived from the cosign.module. 
+
+Installation instructions
+---------------------------
+* you must be running your server within a cosign infrastructure.
+	More info at: http://www.weblogin.org/
+* download the cosign_auth module
+* copy the module into your drupal modules directory
+* enable the module through the ?q=admin/build/modules page
+* configure the module through the ?q=admin/config/system/cosign page
+* add the logout block to your page with the ?q=admin/build/block page
+
+The cosign_auth module is not dependent on any other contributed modules, it
+does not use the webserver_auth module and does not use or rely on the authmap
+table.
+
+If is advisible that the user name used for Drupal UID=1 be a valid cosign
+uniqname capable of authenticating with Cosign.  I have used phpmyadmin to
+manually change the "name" in the "users" table to such a uniqname.  Of
+course, with Drupal 7 you can know assign any user the same capabilities of
+UID=1 (or so they claim!).
+
